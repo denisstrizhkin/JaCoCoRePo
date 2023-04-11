@@ -19,5 +19,6 @@ class ExampleUnitTest {
     fun testReturnTrue() {
         val a = Temp()
         assertEquals(true, a.returnTrue())
+        assertNotEquals(false, a.returnTrue())
     }
 }
