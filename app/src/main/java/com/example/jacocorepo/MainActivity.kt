@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             .debounce(500, TimeUnit.MILLISECONDS)
             .observeOn(Schedulers.io())
             .subscribeOn(AndroidSchedulers.mainThread())
-            .map { it.trim() }
+            .map { it.toString().lowercase() }
             .subscribe { text ->
                 Log.i("MyTag", text.toString())
             }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             .debounce(500, TimeUnit.MILLISECONDS)
             .observeOn(Schedulers.io())
             .subscribeOn(AndroidSchedulers.mainThread())
-            .map { it.trim() }
+            .map { it.toString().lowercase() }
             .subscribe { text ->
                 Log.i("MyTag", text.toString())
             }
